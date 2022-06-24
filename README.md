@@ -1,40 +1,27 @@
-# create-svelte
+# Rpay project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+- E-commerce site with payments working with redis as `primary` database.
 
-## Creating a project
+# Setup env
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Run docker-compose to create new redis instance
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+  > docker-compose up -d
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+- Create new .env file with the example below
 
-> Note: the `@next` is temporary
+  ```
+  REDIS_HOST=127.0.0.1
+  REDIS_PORT=6379
+  REDIS_PW=redis
+  ```
 
-## Developing
+# How to run
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Have to run with `npm` not apply for `yarn`
 
-```bash
-npm run dev
+  ```bash
+  npm install
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+  npm run dev
+  ```
