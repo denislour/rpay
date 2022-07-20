@@ -25,3 +25,7 @@
 
   npm run dev
   ```
+
+## Note
+
+- 6 powerful
